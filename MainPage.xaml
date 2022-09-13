@@ -3,39 +3,55 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp_Sorting_algorithms.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <ContentView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <!-- Add buttons for sort algorithms -->
+            <Grid Grid.Row="0" Grid.RowSpan="3">
+                <HorizontalStackLayout>
+                    <Button Text="Insertion sort"/>
+                    <Button Text="Selection Sort"/>
+                </HorizontalStackLayout>
+            </Grid>
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+            <!-- to get user inputs -->
+            <Grid Grid.Row="3" Grid.RowSpan="1">
+                <HorizontalStackLayout>
+                    <Label Text="Enter count"/>
+                    <Entry MaxLength="20"/>
+                    <Button Text="Generate random numbers"/>
+                </HorizontalStackLayout>
+            </Grid>
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
+            <!-- to display charts -->
+            <Grid Grid.Row="4" Grid.RowSpan="7">
+                <HorizontalStackLayout BackgroundColor="DarkSlateBlue">
+                    <!-- TBD -->
+                </HorizontalStackLayout>
+            </Grid>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+            <!-- to display Summary -->
+            <Grid Grid.Row="12" Grid.RowSpan="7">
+                <HorizontalStackLayout BackgroundColor="Aquamarine">
+                    <!-- TBD -->
+                </HorizontalStackLayout>
+            </Grid>
 
-        </VerticalStackLayout>
-    </ScrollView>
-
+        </Grid>
+    </ContentView>
+    
 </ContentPage>
